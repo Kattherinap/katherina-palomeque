@@ -1,0 +1,111 @@
+*{margin: 0; padding: 0;
+     box-sizing: border-box;
+     font-family: sans-serif;
+}
+body{width: 100%;
+    height: 100vh;
+}
+/*cabeza*/
+header{ 
+    padding: 15px 45px;
+    text-align: end;
+ }
+/*menu de navegacion*/
+.nav{display: inline block;
+    background-color: rgb(247, 232, 34);
+    color: white;
+    padding: 10px 30px;
+    text-decoration: none;
+}
+.nav:hover{ background: orange;
+}
+nav{background-color: rgb(245, 212, 1);
+padding: 10px 5px;
+display: flex;
+justify-content: center;
+}
+/*galeria de fotos*/
+#galeria{display: flex;
+justify-content: center;
+align-items: center;
+flex-wrap: wrap;
+}
+/*grid-areas*/
+.grid-areas-index {display: grid;
+grid-template-areas: 
+"header header"
+"menu menu"
+"galeria galeria"
+"ubicacion video"
+"pie pie";
+grid-template-columns: auto;
+grid-row: auto
+}
+header{grid-area: header;
+    background-color: rgb(243, 108, 36);}
+footer{grid-area: pie;
+      background-color: rgb(102, 47, 5);
+}
+nav{grid-area: menu;
+}
+section{grid-area: galeria;
+      background-color: orangered;
+}
+#ubicacion{grid-area: ubicacion;
+     background-color: rgb(228, 137, 19);
+     text-align: center;
+}
+#video{grid-area: video; 
+    background-color: rgb(225, 142, 94);
+     text-align: center;}
+
+/*quienes somos*/
+.grid-areas-quienessomos-departamento1-departamento2-departamento3 {display: grid;
+    grid-template-areas: 
+    "header "
+    "menu"
+    "section"
+    "galeria"
+    "pie";
+    grid-template-columns: auto;
+    grid-row: auto
+    }
+    header{grid-area: header;
+        background-color: rgb(243, 108, 36);}
+    footer{grid-area: pie;
+          background-color: rgb(102, 47, 5);
+    }
+    nav{grid-area: menu;
+    }
+    section{grid-area: section;
+          background-color: orangered;
+          text-align: center;
+          justify-content: center;
+          color: aliceblue;
+          justify-items: center;
+          padding: auto;;
+    }
+    #ubicacion{grid-area: ubicacion;
+         background-color: rgb(228, 137, 19);
+         text-align: center;
+    }
+    #video{grid-area: video; 
+        background-color: rgb(225, 142, 94);
+         text-align: center;}
+
+
+/* estilos generales*/
+.centrado{text-align: center;}
+.negrita{font-weight: bold;}
+.tamano{font-size: 30px;}
+.izquierda {text-align: left;}
+.derecha{text-align: right;}
+.interlineado{line-height: 2;}
+.sinSubrayar{text-decoration: none;}
+.colorFondo{background-color: rgb(80, 80, 80);}
+.colorFondo2{background-color: rgb(211, 64, 11);
+}
+@media (max-width:600px)
+{nav{background-color: blueviolet;
+flex-direction: column;
+}}
