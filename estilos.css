@@ -9,7 +9,11 @@ body{width: 100%;
 header{ 
     padding: 15px 45px;
     text-align: end;
+    animation-name: texto;
+    animation-duration: 5s;
  }
+header{ background-image: radial-gradient(yellow, rgb(255, 153, 0)
+    );}
 /*menu de navegacion*/
 .nav{display: inline block;
     background-color: rgb(247, 232, 34);
@@ -30,6 +34,23 @@ justify-content: center;
 align-items: center;
 flex-wrap: wrap;
 }
+ /*animaciones transicion*/
+.transicion{ transition: all 2s;}
+.transicion:hover{
+    width: 100%;
+    height: 300px;
+    border: solid 20px rgb(93, 92, 91);
+}
+}
+.textoAnimado{
+    animation-name: texto;
+    animation-duration: 6s;
+}
+@keyframes texto{
+    from{
+        transform: translateX(400px);}
+    to{ transform: translateX(0);}
+}
 /*grid-areas*/
 .grid-areas-index {display: grid;
 grid-template-areas: 
@@ -44,12 +65,12 @@ grid-row: auto
 header{grid-area: header;
     background-color: rgb(243, 108, 36);}
 footer{grid-area: pie;
-      background-color: rgb(102, 47, 5);
+      background-color: rgb(50, 5, 102);
 }
 nav{grid-area: menu;
 }
 section{grid-area: galeria;
-      background-color: orangered;
+      background-image: yellow, orangered;
 }
 #ubicacion{grid-area: ubicacion;
      background-color: rgb(228, 137, 19);
@@ -92,8 +113,6 @@ section{grid-area: galeria;
     #video{grid-area: video; 
         background-color: rgb(225, 142, 94);
          text-align: center;}
-
-
 /* estilos generales*/
 .centrado{text-align: center;}
 .negrita{font-weight: bold;}
